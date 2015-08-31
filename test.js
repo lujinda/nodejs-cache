@@ -1,4 +1,5 @@
-var cache = require('./cache');
+var cache_module = new require('./cache');
+var cache  = new cache_module.Cache({'max_size': 10, 'expire': 2});
 var fs = require('fs');
 
 function sleep(sec){
